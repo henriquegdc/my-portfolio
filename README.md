@@ -31,26 +31,11 @@ As seguintes ferramentas, frameworks e bibliotecas foram utilizados na construç
 
 ### 💻 Front-end
 
-* **Framework/Biblioteca:** [Ex: React v18, Vue.js v3, Angular v17]
-* **Linguagem/Superset:** [Ex: TypeScript, JavaScript ES6+]
-* **Estilização:** [Ex: Tailwind CSS, Sass, Styled Components, Material UI]
-* **Gerenciamento de Estado:** [Ex: Redux Toolkit, Zustand, Context API]
-* **Build Tool:** [Ex: Vite, Webpack]
-
-### 🖥️ Back-end
-
-* **Linguagem/Runtime:** [Ex: Java 17 (JDK), Node.js v20, Python 3.11]
-* **Framework:** [Ex: Spring Boot 3.x, NestJS, Express, Django]
-* **Banco de Dados:** [Ex: PostgreSQL, MySQL, MongoDB]
-* **ORM / Query Builder:** [Ex: Hibernate/JPA, Prisma, TypeORM]
-* **Autenticação:** [Ex: JWT, OAuth2, Spring Security]
-
-### ⚙️ Infraestrutura & DevOps
-
-* **Containerização:** [Ex: Docker, Docker Compose]
-* **Orquestração:** [Ex: Kubernetes (K8s)]
-* **Cloud:** [Ex: AWS (EC2, RDS, S3), Vercel, Heroku, Google Cloud]
-* **CI/CD:** [Ex: GitHub Actions, Jenkins, SonarQube]
+* **Framework/Biblioteca:** [Anime.js](https://animejs.com/) (v3.2.1+) para animações do sistema de carregamento e [GSAP](https://gsap.com/) para transições de interface.
+* **Linguagem/Superset:** JavaScript (ES6+) para lógica de sliders, animações de scroll e manipulação dinâmica do DOM.
+* **Estilização:** CSS3 moderno utilizando Variáveis (`:root`), Flexbox, Grid Layout e animações `@keyframes` personalizadas.
+* **Ícones e Tipografia:** Font Awesome v6.4.0 para iconografia técnica; Google Fonts (fontes: *Tajawal*, *Fira Code* e *Orbitron*).
+* **APIs do Navegador:** [Intersection Observer API](https://www.google.com/search?q=https://developer.mozilla.org/pt-BR/docs/Web/API/Intersection_Observer_API) para ativação de animações ao entrar na área de visualização.
 
 ---
 
