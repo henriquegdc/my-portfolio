@@ -1,4 +1,3 @@
-
 function initLoader() {
     const loader = document.getElementById('loader');
     const progressBar = loader.querySelector('.loader-progress-bar');
@@ -592,25 +591,131 @@ function initScrollEffects() {
     });
 }
 
-function initDirection() {
+function initLanguage() {
     const dirToggle = document.getElementById('dirToggle');
-    const html = document.documentElement;
-    let currentDir = localStorage.getItem('dir') || 'ltr';
     
-    function setDirection(dir) {
-        currentDir = dir;
-        localStorage.setItem('dir', dir);
-        html.setAttribute('dir', dir);
+    const translations = [
+        { pt: "Início", en: "Home" },
+        { pt: "Projetos", en: "Projects" },
+        { pt: "Sobre", en: "About" },
+        { pt: "Feedbacks", en: "Feedbacks" },
+        { pt: "Certificações", en: "Certifications" },
+        { pt: "Contato", en: "Contact" },
+        { pt: "Idioma", en: "Language" },
+        { pt: " Desenvolvedor Full-Stack", en: " Full-Stack Developer" },
+        { pt: "Desenvolvedor Full-Stack", en: "Full-Stack Developer" },
+        { pt: "CRIANDO", en: "BUILDING" },
+        { pt: "EXPERIÊNCIAS", en: "DIGITAL" },
+        { pt: "DIGITAIS", en: "EXPERIENCES" },
+        { pt: "Desenvolvimento Full-Stack", en: "Full-Stack Development" },
+        { pt: "Design de API", en: "API Design" },
+        { pt: "Arquitetura de Software", en: "Software Architecture" },
+        { pt: "Engenheiro de Software focado na construção de arquiteturas robustas e aplicações web de alto desempenho, desde a infraestrutura de backend até interfaces dinâmicas e responsivas.", en: "Software Engineer focused on building robust architectures and high-performance web applications, from backend infrastructure to dynamic and responsive interfaces." },
+        { pt: "Sistemas Protegidos", en: "Systems Secured" },
+        { pt: "Anos de Experiência", en: "Years Experience" },
+        { pt: "Clientes Protegidos", en: "Clients Protected" },
+        { pt: "Entre em contato", en: "Contact Me" },
+        { pt: "Ver Serviços", en: "View Services" },
+        { pt: "Teste de Intrusão", en: "Network Penetration" },
+        { pt: "Avaliação avançada de segurança de rede e identificação de vulnerabilidades", en: "Advanced network security assessment and vulnerability identification" },
+        { pt: "Sistemas", en: "Systems" },
+        { pt: "Sucesso", en: "Success" },
+        { pt: "Análise de Criptografia", en: "Encryption Analysis" },
+        { pt: "Avaliação de protocolos de criptografia e implementações criptográficas", en: "Evaluating encryption protocols and cryptographic implementations" },
+        { pt: "Nível", en: "Level" },
+        { pt: "Seguro", en: "Secure" },
+        { pt: "Varredura de Vulnerabilidades", en: "Vulnerability Scanning" },
+        { pt: "Sistemas abrangentes de varredura de segurança e detecção de ameaças", en: "Comprehensive security scanning and threat detection systems" },
+        { pt: "Varreduras", en: "Scans" },
+        { pt: "Precisão", en: "Accuracy" },
+        { pt: "Resposta a Incidentes", en: "Incident Response" },
+        { pt: "Resposta rápida e mitigação de violações de segurança", en: "Rapid response and mitigation of security breaches" },
+        { pt: "Suporte", en: "Support" },
+        { pt: "Resposta", en: "Response" },
+        { pt: "Segurança de Código", en: "Code Security" },
+        { pt: "Testes de segurança de aplicações e práticas de codificação segura", en: "Application security testing and secure coding practices" },
+        { pt: "Profissional Especialista", en: "Expert Professional" },
+        { pt: "Com mais de uma década de experiência em cibersegurança, sou especialista em proteger organizações contra ameaças cibernéticas sofisticadas. Minha experiência abrange testes de invasão, avaliação de vulnerabilidades, resposta a incidentes e design de arquitetura de segurança para sistemas empresariais.", en: "With over a decade of experience in cybersecurity, I specialize in protecting organizations from sophisticated cyber threats. My expertise spans penetration testing, vulnerability assessment, incident response, and security architecture design for enterprise-level systems." },
+        { pt: "Hacking Ético", en: "Ethical Hacking" },
+        { pt: "Hacker ético certificado com experiência em testes de invasão e avaliação de vulnerabilidades.", en: "Certified ethical hacker with expertise in penetration testing and vulnerability assessment." },
+        { pt: "Segurança de Rede", en: "Network Security" },
+        { pt: "Configuração avançada de segurança de rede e gerenciamento de firewall.", en: "Advanced network security configuration and firewall management." },
+        { pt: "Arquitetura de Segurança", en: "Security Architecture" },
+        { pt: "Projetando e implementando arquiteturas de segurança robustas para sistemas corporativos.", en: "Designing and implementing robust security architectures for enterprise systems." },
+        { pt: "Monitoramento 24/7 e resposta rápida a incidentes e violações de segurança.", en: "24/7 monitoring and rapid response to security incidents and breaches." },
+        { pt: "Teste de Invasão", en: "Penetration Testing" },
+        { pt: "Identifique vulnerabilidades antes que os invasores as explorem através de testes de segurança abrangentes.", en: "Identify vulnerabilities before attackers exploit them through comprehensive security testing." },
+        { pt: "Teste de Aplicação Web", en: "Web Application Testing" },
+        { pt: "Engenharia Social", en: "Social Engineering" },
+        { pt: "Segurança Física", en: "Physical Security" },
+        { pt: "Avaliação de Vulnerabilidades", en: "Vulnerability Assessment" },
+        { pt: "Avaliação sistemática de fraquezas de segurança com análise de risco abrangente.", en: "Systematic evaluation of security weaknesses with comprehensive risk analysis." },
+        { pt: "Varredura Automatizada", en: "Automated Scanning" },
+        { pt: "Teste Manual", en: "Manual Testing" },
+        { pt: "Análise de Risco", en: "Risk Analysis" },
+        { pt: "Planos de Correção", en: "Remediation Plans" },
+        { pt: "Consultoria de Segurança", en: "Security Consulting" },
+        { pt: "Orientação estratégica de segurança para construir mecanismos de defesa robustos e arquitetura personalizada.", en: "Strategic security guidance to build robust defense mechanisms and custom architecture." },
+        { pt: "Desenvolvimento de Políticas", en: "Policy Development" },
+        { pt: "Auditorias de Conformidade", en: "Compliance Audits" },
+        { pt: "Programas de Treinamento", en: "Training Programs" },
+        { pt: "Saiba Mais", en: "Learn More" },
+        { pt: "Hacker Ético Certificado", en: "Certified Ethical Hacker" },
+        { pt: "Profissional Certificado em Segurança de Sistemas de Informação", en: "Certified Information Systems Security Professional" },
+        { pt: "Profissional Certificado em Segurança Ofensiva", en: "Offensive Security Certified Professional" },
+        { pt: "Global - Remoto Disponível", en: "Global - Remote Available" },
+        { pt: "Nome", en: "Name" },
+        { pt: "E-mail", en: "Email" },
+        { pt: "Assunto", en: "Subject" },
+        { pt: "Mensagem", en: "Message" },
+        { pt: "Enviar Mensagem Segura", en: "Send Secure Message" },
+        { pt: "© 2026 Portfolio - Exemplo.", en: "© 2026 Portfolio - Example." },
+        { pt: "INICIALIZAÇÃO DO PROCESSO DE BUILD", en: "BUILD PROCESS INITIALIZATION" },
+        { pt: "[INFO] Compilando módulos...", en: "[INFO] Compiling modules..." },
+        { pt: "[INFO] Construindo backend Java/Spring Boot robusto: ", en: "[INFO] Building robust Java/Spring Boot backend: " },
+        { pt: "[INFO] Otimizando assets do frontend Angular: ", en: "[INFO] Optimizing Angular frontend assets: " },
+        { pt: "[SUCESSO] Sistema pronto. Iniciando aplicação.", en: "[SUCCESS] System ready. Launching application." },
+        { pt: "ATIVO", en: "ACTIVE" },
+        { pt: "ONLINE", en: "ONLINE" },
+        { pt: "Painel de Segurança", en: "SECURITY DASHBOARD" },
+        { pt: "Status do Firewall", en: "Firewall Status" },
+        { pt: "Detecção de Ameaças", en: "Threat Detection" },
+        { pt: "MONITORANDO", en: "MONITORING" },
+        { pt: "Nível de Criptografia", en: "Encryption Level" }
+    ];
+
+    let currentLang = localStorage.getItem('lang') || 'en';
+
+    function translatePage(lang) {
+        const elements = document.querySelectorAll('span, p, h1, h2, h3, h4, a, label, div');
+        
+        elements.forEach(el => {
+            if (el.childNodes.length > 0) {
+                el.childNodes.forEach(node => {
+                    if (node.nodeType === Node.TEXT_NODE) {
+                        let text = node.textContent.trim();
+                        if (text) {
+                            const match = translations.find(t => t.pt === text || t.en === text);
+                            if (match) {
+                                node.textContent = node.textContent.replace(text, match[lang]);
+                            }
+                        }
+                    }
+                });
+            }
+        });
         
         const dirText = dirToggle?.querySelector('.dir-text');
-        if (dirText) dirText.textContent = dir === 'rtl' ? 'PT' : 'EN';
+        if (dirText) dirText.textContent = lang === 'pt' ? 'EN' : 'PT-BR';
     }
-    
+
+    translatePage(currentLang);
+
     if (dirToggle) {
-        setDirection(currentDir);
         dirToggle.addEventListener('click', () => {
-            const newDir = currentDir === 'ltr' ? 'rtl' : 'ltr';
-            setDirection(newDir);
+            currentLang = currentLang === 'en' ? 'pt' : 'en';
+            localStorage.setItem('lang', currentLang);
+            translatePage(currentLang);
             
             if (typeof anime !== 'undefined') {
                 anime({
@@ -638,7 +743,8 @@ if (contactForm) {
             });
         }
         
-        const message = 'Message sent securely! Your data is encrypted.';
+        const lang = localStorage.getItem('lang') || 'en';
+        const message = lang === 'pt' ? 'Mensagem enviada com segurança! Seus dados estão criptografados.' : 'Message sent securely! Your data is encrypted.';
         
         setTimeout(() => {
             alert(message);
@@ -830,6 +936,6 @@ document.addEventListener('DOMContentLoaded', () => {
     initMobileMenu();
     initParallax();
     initScrollEffects();
-    initDirection();
+    initLanguage(); 
     initHacksSlider();
 });
