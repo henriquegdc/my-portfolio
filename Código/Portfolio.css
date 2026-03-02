@@ -1,29 +1,31 @@
 :root {
-    --primary: #00ff88;
-    --secondary: #00d4ff;
-    --accent: #ff6b6b;
-    --success: #51cf66;
-    --warning: #ffd43b;
-    --danger: #ff4757;
-    --bg-dark: #0a0e1a;
-    --bg-darker: #050810;
-    --bg-card: #0f1419;
-    --bg-hover: #1a1f2e;
-    --border: #1e293b;
-    --text-primary: #e2e8f0;
-    --text-secondary: #94a3b8;
-    --text-muted: #64748b;
-    --gradient-1: linear-gradient(135deg, #00ff88 0%, #00d4ff 100%);
-    --gradient-2: linear-gradient(135deg, #00d4ff 0%, #00ff88 100%);
+    --primary: #88c0d0; /* Azul "Frost" principal */
+    --secondary: #81a1c1; /* Azul ligeiramente mais escuro */
+    --accent: #b48ead; /* Roxo pastel */
+    --success: #a3be8c; /* Verde pastel */
+    --warning: #ebcb8b;
+    --danger: #bf616a;
+    --bg-dark: #000000; /* Cinza escuro azulado */
+    --bg-darker: #14161a;
+    --bg-card: #020303; /* Cartões mais claros */
+    --bg-hover: #000000;
+    --border: #010102;
+    --text-primary: #e5e9f0; /* Branco gelo */
+    --text-secondary: #d8dee9;
+    --text-muted: #94a3b8;
+    --gradient-1: linear-gradient(135deg, #88c0d0 0%, #81a1c1 100%);
+    --gradient-2: linear-gradient(135deg, #81a1c1 0%, #88c0d0 100%);
+    
     --shadow-sm: 0 2px 4px rgba(0,0,0,0.1);
     --shadow-md: 0 4px 6px rgba(0,0,0,0.2);
     --shadow-lg: 0 10px 15px rgba(0,0,0,0.3);
-    --shadow-glow: 0 0 30px rgba(0,255,136,0.3);
-    --shadow-glow-strong: 0 0 50px rgba(0,255,136,0.5);
+    --shadow-glow: 0 0 30px rgba(136, 192, 208, 0.2);
+    --shadow-glow-strong: 0 0 50px rgba(136, 192, 208, 0.4);
+    
     --transition: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-    --font-primary: 'Tajawal', sans-serif;
+    --font-primary: 'Inter', sans-serif;
     --font-code: 'Fira Code', monospace;
-    --font-tech: 'Orbitron', monospace;
+    --font-tech: 'Inter', sans-serif;
 }
 
 * {
