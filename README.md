@@ -41,6 +41,8 @@ As seguintes ferramentas, frameworks e bibliotecas foram utilizados na construç
 
 ### 🌐 Wireframes
 
+Figma: https://www.figma.com/design/WvejnGwLVT6moclwgrpICR/Sem-t%C3%ADtulo?node-id=31-2&t=CEvAAAv9pqhCuPEh-1
+
 Para melhor visualização, as telas principais estão organizadas lado a lado.
 
 | Tela | Captura de Tela |
