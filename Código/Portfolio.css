@@ -1182,7 +1182,13 @@ body {
 .screen-body {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 15px;
+    padding: 10px;
+    height: 300px; /* Altura fixa para permitir scroll */
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: #00ff41 transparent;
 }
 
 .dashboard-item {
@@ -3318,4 +3324,94 @@ body {
     .current-slide {
         font-size: 1rem;
     }
+}
+
+
+/* Estilização para o WakaTime dentro do monitor */
+.waka-stats-container {
+    display: flex;
+    flex-direction: column; /* Empilha no monitor pequeno */
+    gap: 10px;
+    margin-top: 10px;
+    overflow-y: auto;
+    max-height: 150px; /* Ajuste conforme o tamanho do seu monitor no CSS */
+}
+
+/* Estilo para cada imagem/card de estatística */
+.waka-img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 8px;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 255, 65, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.waka-img:hover {
+    transform: scale(1.02);
+    border-color: #00ff41;
+}
+
+/* Efeito de Scanlines e Flicker (Monitor Antigo) */
+.crt-effect {
+    position: relative;
+    overflow: hidden;
+    background: #050505;
+    border: 2px solid #00ff41;
+    box-shadow: inset 0 0 50px rgba(0, 255, 65, 0.2), 0 0 20px rgba(0, 255, 65, 0.2);
+}
+
+/* As linhas horizontais pretas */
+.crt-effect::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), 
+                linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+    z-index: 2;
+    background-size: 100% 3px, 3px 100%;
+    pointer-events: none;
+}
+
+/* O brilho sutil de tela ligada */
+.crt-effect::after {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    background: rgba(18, 16, 16, 0.1);
+    opacity: 0;
+    z-index: 2;
+    pointer-events: none;
+    animation: flicker 0.15s infinite;
+}
+
+@keyframes flicker {
+    0% { opacity: 0.27; }
+    50% { opacity: 0.32; }
+    100% { opacity: 0.29; }
+}
+
+/* Transição de abertura estilo "TV Antiga" */
+.modal-container {
+    position: relative;
+    width: 90%;
+    max-width: 1100px;
+    /* Começa como uma linha fina horizontal */
+    transform: scaleY(0.005) scaleX(0);
+    opacity: 0;
+    transition: all 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.dashboard-modal.active .modal-container {
+    transform: scaleY(1) scaleX(1);
+    opacity: 1;
+    animation: crt-power-on 0.5s ease-out forwards;
+}
+
+@keyframes crt-power-on {
+    0% { transform: scaleY(0.005) scaleX(0); }
+    50% { transform: scaleY(0.005) scaleX(1); }
+    100% { transform: scaleY(1) scaleX(1); }
 }
