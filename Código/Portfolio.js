@@ -598,102 +598,99 @@ function initLanguage() {
     const dirToggle = document.getElementById('dirToggle');
     
     const translations = [
+        // --- NAVEGAÇÃO ---
         { pt: "Início", en: "Home" },
         { pt: "Projetos", en: "Projects" },
         { pt: "Sobre", en: "About" },
         { pt: "Feedbacks", en: "Feedbacks" },
         { pt: "Certificações", en: "Certifications" },
         { pt: "Contato", en: "Contact" },
-        { pt: "Seu nome", en: "Your name" },
-        { pt: "Sua mensagem", en: "Your message" },
-        { pt: "Deixe seu feedback", en: "Leave your feedback" },
-        { pt: "Enviar", en: "Submit" },
         { pt: "Idioma", en: "Language" },
-        { pt: " Desenvolvedor Full-Stack", en: " Full-Stack Developer" },
+
+        // --- HERO SECTION ---
         { pt: "Desenvolvedor Full-Stack", en: "Full-Stack Developer" },
-        { pt: "CRIANDO", en: "BUILDING" },
-        { pt: "EXPERIÊNCIAS", en: "DIGITAL" },
-        { pt: "DIGITAIS", en: "EXPERIENCES" },
+        { pt: "BEM VINDO", en: "WELCOME" },
+        { pt: "AO MEU", en: "TO MY" },
+        { pt: "PORTIFÓLIO", en: "PORTFOLIO" },
         { pt: "Desenvolvimento Full-Stack", en: "Full-Stack Development" },
         { pt: "Design de API", en: "API Design" },
         { pt: "Arquitetura de Software", en: "Software Architecture" },
         { pt: "Engenheiro de Software focado na construção de arquiteturas robustas e aplicações web de alto desempenho, desde a infraestrutura de backend até interfaces dinâmicas e responsivas.", en: "Software Engineer focused on building robust architectures and high-performance web applications, from backend infrastructure to dynamic and responsive interfaces." },
-        { pt: "Sistemas Protegidos", en: "Systems Secured" },
+
+        // --- STATS HERO ---
         { pt: "Anos de Experiência", en: "Years Experience" },
-        { pt: "Clientes Protegidos", en: "Clients Protected" },
+        { pt: "Recomendações", en: "Recommendations" },
         { pt: "Entre em contato", en: "Contact Me" },
-        { pt: "Ver Serviços", en: "View Services" },
-        { pt: "Teste de Intrusão", en: "Network Penetration" },
-        { pt: "Avaliação avançada de segurança de rede e identificação de vulnerabilidades", en: "Advanced network security assessment and vulnerability identification" },
-        { pt: "Sistemas", en: "Systems" },
-        { pt: "Sucesso", en: "Success" },
-        { pt: "Análise de Criptografia", en: "Encryption Analysis" },
-        { pt: "Avaliação de protocolos de criptografia e implementações criptográficas", en: "Evaluating encryption protocols and cryptographic implementations" },
-        { pt: "Nível", en: "Level" },
-        { pt: "Seguro", en: "Secure" },
-        { pt: "Varredura de Vulnerabilidades", en: "Vulnerability Scanning" },
-        { pt: "Sistemas abrangentes de varredura de segurança e detecção de ameaças", en: "Comprehensive security scanning and threat detection systems" },
-        { pt: "Varreduras", en: "Scans" },
-        { pt: "Precisão", en: "Accuracy" },
-        { pt: "Resposta a Incidentes", en: "Incident Response" },
-        { pt: "Resposta rápida e mitigação de violações de segurança", en: "Rapid response and mitigation of security breaches" },
-        { pt: "Suporte", en: "Support" },
-        { pt: "Resposta", en: "Response" },
-        { pt: "Segurança de Código", en: "Code Security" },
-        { pt: "Testes de segurança de aplicações e práticas de codificação segura", en: "Application security testing and secure coding practices" },
-        { pt: "Profissional Especialista", en: "Expert Professional" },
-        { pt: "Com mais de uma década de experiência em cibersegurança, sou especialista em proteger organizações contra ameaças cibernéticas sofisticadas. Minha experiência abrange testes de invasão, avaliação de vulnerabilidades, resposta a incidentes e design de arquitetura de segurança para sistemas empresariais.", en: "With over a decade of experience in cybersecurity, I specialize in protecting organizations from sophisticated cyber threats. My expertise spans penetration testing, vulnerability assessment, incident response, and security architecture design for enterprise-level systems." },
+        { pt: "Baixar Currículo", en: "Download Resume" },
+
+        // --- MONITOR DE SEGURANÇA (WAKATIME / GITHUB) ---
+        { pt: "CENTRAL DE COMANDO - HENRIQUE CARVALHO", en: "COMMAND CENTER - HENRIQUE CARVALHO" },
+        { pt: "SISTEMAS:", en: "SYSTEMS:" },
+        { pt: "ONLINE", en: "ONLINE" },
+        { pt: "Atividade de Código (WakaTime)", en: "Coding Activity (WakaTime)" },
+        { pt: "Visão Geral do GitHub", en: "GitHub Overview" },
+        { pt: "Grade de Contribuições", en: "Contribution Grid" },
+
+        // --- PROJETOS & MODAL ---
+        { pt: "Aplicação de gestão comercial completa desenvolvida para automatizar e otimizar processos de uma loja especializada em produtos Apple.", en: "Complete commercial management application developed to automate and optimize processes for a store specialized in Apple products." },
+        { pt: "Clique para detalhes", en: "Click for details" },
+        { pt: "Nome do Projeto", en: "Project Name" },
+        { pt: "Descrição do projeto...", en: "Project description..." },
+        { pt: "Tecnologias Utilizadas", en: "Technologies Used" },
+
+        // --- SOBRE & APRENDIZADO CONTÍNUO ---
+        { pt: "Aprendizado Contínuo", en: "Continuous Learning" },
+        { pt: "Construo minha evolução profissional combinando fundamentos sólidos de arquitetura de software com o domínio do inglês e a exploração contínua de novas tecnologias.", en: "I build my professional evolution by combining solid foundations in software architecture with English mastery and the continuous exploration of new technologies." },
+        { pt: "Estudante de Engenharia de Software", en: "Software Engineering Student" },
+        { pt: "Desenvolvedor apaixonado por transformar ideias em soluções digitais eficientes. cursando Engenharia de Software na PUC Minas, com foco na criação de sistemas escaláveis e interfaces intuitivas. Atualmente, dedico-me ao desenvolvimento do projeto TI4 em Belo Horizonte, unindo tecnologia e sustentabilidade.", en: "Passionate developer dedicated to transforming ideas into efficient digital solutions. Currently studying Software Engineering at PUC Minas, with a focus on creating scalable systems and intuitive interfaces. I am currently dedicated to developing the TI4 project in Belo Horizonte, combining technology and sustainability." },
         { pt: "Hacking Ético", en: "Ethical Hacking" },
-        { pt: "Hacker ético certificado com experiência em testes de invasão e avaliação de vulnerabilidades.", en: "Certified ethical hacker with expertise in penetration testing and vulnerability assessment." },
+        { pt: "Modelagem de dados com SQL e implementação de lógicas de negócio complexas.", en: "Data modeling with SQL and implementation of complex business logic." },
         { pt: "Segurança de Rede", en: "Network Security" },
-        { pt: "Configuração avançada de segurança de rede e gerenciamento de firewall.", en: "Advanced network security configuration and firewall management." },
+        { pt: "Focado em arquitetura de software e expansão internacional através com o domínio do inglês e a exploração contínua de novas tecnologias.", en: "Focused on software architecture and international expansion through English mastery and the continuous exploration of new technologies." },
         { pt: "Arquitetura de Segurança", en: "Security Architecture" },
-        { pt: "Projetando e implementando arquiteturas de segurança robustas para sistemas corporativos.", en: "Designing and implementing robust security architectures for enterprise systems." },
-        { pt: "Monitoramento 24/7 e resposta rápida a incidentes e violações de segurança.", en: "24/7 monitoring and rapid response to security incidents and breaches." },
-        { pt: "Teste de Invasão", en: "Penetration Testing" },
-        { pt: "Identifique vulnerabilidades antes que os invasores as explorem através de testes de segurança abrangentes.", en: "Identify vulnerabilities before attackers exploit them through comprehensive security testing." },
-        { pt: "Teste de Aplicação Web", en: "Web Application Testing" },
-        { pt: "Engenharia Social", en: "Social Engineering" },
-        { pt: "Segurança Física", en: "Physical Security" },
-        { pt: "Avaliação de Vulnerabilidades", en: "Vulnerability Assessment" },
-        { pt: "Avaliação sistemática de fraquezas de segurança com análise de risco abrangente.", en: "Systematic evaluation of security weaknesses with comprehensive risk analysis." },
-        { pt: "Varredura Automatizada", en: "Automated Scanning" },
-        { pt: "Teste Manual", en: "Manual Testing" },
-        { pt: "Análise de Risco", en: "Risk Analysis" },
-        { pt: "Planos de Correção", en: "Remediation Plans" },
-        { pt: "Consultoria de Segurança", en: "Security Consulting" },
-        { pt: "Orientação estratégica de segurança para construir mecanismos de defesa robustos e arquitetura personalizada.", en: "Strategic security guidance to build robust defense mechanisms and custom architecture." },
-        { pt: "Desenvolvimento de Políticas", en: "Policy Development" },
-        { pt: "Auditorias de Conformidade", en: "Compliance Audits" },
-        { pt: "Programas de Treinamento", en: "Training Programs" },
-        { pt: "Saiba Mais", en: "Learn More" },
+        { pt: "Experiência com ecossistema Angular, Spring Boot (Java) e Python para aplicações robustas.", en: "Experience with the Angular ecosystem, Spring Boot (Java), and Python for robust applications." },
+        { pt: "Resposta a Incidentes", en: "Incident Response" },
+        { pt: "Desenvolvimento multiplataforma explorando tecnologias como Swift e C para alta performance.", en: "Cross-platform development exploring technologies such as Swift and C for high performance." },
+
+        // --- AUDITORIA DE SEGURANÇA (TERMINAL) ---
+        { pt: "AUDITORIA DE SEGURANÇA", en: "SECURITY AUDIT" },
+        { pt: "Iniciando Nmap 7.92...", en: "Starting Nmap 7.92..." },
+        { pt: "PORTA ESTADO SERVIÇO", en: "PORT STATE SERVICE" },
+        { pt: "22/tcp aberto ssh", en: "22/tcp open ssh" },
+        { pt: "80/tcp aberto http", en: "80/tcp open http" },
+        { pt: "443/tcp aberto https", en: "443/tcp open https" },
+        { pt: "[✓] Varredura de segurança concluída", en: "[✓] Security scan completed" },
+
+        // --- FEEDBACKS ---
+        { pt: "Deixe seu feedback", en: "Leave your feedback" },
+        { pt: "Nome", en: "Name" },
+        { pt: "Mensagem", en: "Message" },
+        { pt: "Seu nome", en: "Your name" },
+        { pt: "Sua mensagem", en: "Your message" },
+        { pt: "Enviar", en: "Submit" },
+
+        // --- CERTIFICAÇÕES ---
         { pt: "Hacker Ético Certificado", en: "Certified Ethical Hacker" },
         { pt: "Profissional Certificado em Segurança de Sistemas de Informação", en: "Certified Information Systems Security Professional" },
         { pt: "Profissional Certificado em Segurança Ofensiva", en: "Offensive Security Certified Professional" },
-        { pt: "Global - Remoto Disponível", en: "Global - Remote Available" },
-        { pt: "Nome", en: "Name" },
+
+        // --- CONTATO ---
         { pt: "E-mail", en: "Email" },
         { pt: "Telefone", en: "Phone" },
         { pt: "Localização", en: "Location" },
         { pt: "Assunto", en: "Subject" },
-        { pt: "Mensagem", en: "Message" },
         { pt: "Enviar Mensagem", en: "Send Message" },
-        { pt: "© 2026 Portfolio - Exemplo.", en: "© 2026 Portfolio - Example." },
+
+        // --- TERMINAL INICIAL (LOADER) ---
         { pt: "INICIALIZAÇÃO DO PROCESSO DE BUILD", en: "BUILD PROCESS INITIALIZATION" },
         { pt: "[INFO] Compilando módulos...", en: "[INFO] Compiling modules..." },
-        { pt: "[INFO] Construindo backend Java/Spring Boot robusto: ", en: "[INFO] Building robust Java/Spring Boot backend: " },
-        { pt: "[INFO] Otimizando assets do frontend Angular: ", en: "[INFO] Optimizing Angular frontend assets: " },
-        { pt: "[SUCESSO] Sistema pronto. Iniciando aplicação.", en: "[SUCCESS] System ready. Launching application." },
+        { pt: "[INFO] Construindo backend Java/Spring Boot robusto:", en: "[INFO] Building robust Java/Spring Boot backend:" },
         { pt: "ATIVO", en: "ACTIVE" },
-        { pt: "ONLINE", en: "ONLINE" },
-        { pt: "Painel de Segurança", en: "SECURITY DASHBOARD" },
-        { pt: "Status do Firewall", en: "Firewall Status" },
-        { pt: "Detecção de Ameaças", en: "Threat Detection" },
-        { pt: "MONITORANDO", en: "MONITORING" },
-        { pt: "Nível de Criptografia", en: "Encryption Level" },
-        { pt: "Ver Serviços", en: "View Services" },
-        { pt: "Baixar Currículo", en: "Download Resume" }
+        { pt: "[INFO] Otimizando assets do frontend Angular:", en: "[INFO] Optimizing Angular frontend assets:" },
+        { pt: "[SUCESSO] Sistema pronto. Iniciando aplicação.", en: "[SUCCESS] System ready. Launching application." },
 
+        // --- FOOTER ---
+        { pt: "© 2026 Portfolio - Exemplo.", en: "© 2026 Portfolio - Example." }
     ];
 
     let currentLang = localStorage.getItem('lang') || 'en';
@@ -705,11 +702,15 @@ function initLanguage() {
             if (el.childNodes.length > 0) {
                 el.childNodes.forEach(node => {
                     if (node.nodeType === Node.TEXT_NODE) {
-                        let text = node.textContent.trim();
-                        if (text) {
-                            const match = translations.find(t => t.pt === text || t.en === text);
+                        let originalText = node.textContent.trim();
+                        // Remove múltiplas quebras de linha/espaços para bater certinho com o dicionário
+                        let normalizedText = originalText.replace(/\s+/g, ' '); 
+                        
+                        if (normalizedText) {
+                            const match = translations.find(t => t.pt === normalizedText || t.en === normalizedText);
                             if (match) {
-                                node.textContent = node.textContent.replace(text, match[lang]);
+                                // Substitui preservando os espaços externos se o HTML os tiver
+                                node.textContent = node.textContent.replace(originalText, match[lang]);
                             }
                         }
                     }
@@ -717,11 +718,11 @@ function initLanguage() {
             }
         });
         
-        // translate input/textarea placeholders
         const formElems = document.querySelectorAll('input[placeholder], textarea[placeholder]');
         formElems.forEach(el => {
-            const text = el.getAttribute('placeholder').trim();
-            const match = translations.find(t => t.pt === text || t.en === text);
+            let originalText = el.getAttribute('placeholder').trim();
+            let normalizedText = originalText.replace(/\s+/g, ' ');
+            const match = translations.find(t => t.pt === normalizedText || t.en === normalizedText);
             if (match) {
                 el.setAttribute('placeholder', match[lang]);
             }
