@@ -36,6 +36,8 @@ As seguintes ferramentas, frameworks e bibliotecas foram utilizados na construç
 * **Estilização:** CSS3 moderno utilizando Variáveis (`:root`), Flexbox, Grid Layout e animações `@keyframes` personalizadas.
 * **Ícones e Tipografia:** Font Awesome v6.4.0 para iconografia técnica; Google Fonts (fontes: *Tajawal*, *Fira Code* e *Orbitron*).
 * **APIs do Navegador:** [Intersection Observer API](https://www.google.com/search?q=https://developer.mozilla.org/pt-BR/docs/Web/API/Intersection_Observer_API) para ativação de animações ao entrar na área de visualização.
+* **Back-end as a Service (BaaS):** Firebase (Cloud Firestore)
+* **Outras Integrações:** EmailJS (para envio de formulários de contato)
 
 ---
 
@@ -57,14 +59,11 @@ Para melhor visualização, as telas principais estão organizadas lado a lado.
 
 Para melhor visualização, as telas principais estão organizadas lado a lado.
 
-| Tela | Captura de Tela |
+| Aluno | Portfólio |
 | :---: | :---: |
-| **Página Inicial (Home)** |
-| <img src="https://github.com/user-attachments/assets/cdfb9e1f-42c9-41de-9523-2362264508f5" alt="Tela Inicial da Aplicação Web" width="120px" height="120px"> | <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Tela de Login" width="120px" height="120px"> |
-| **Cadastro de Clientes** | **Cadastro de Produtos** |
-| <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Tela de Cadastro de Clientes" width="120px" height="120px"> | <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Tela de Cadastro de Produtos" width="120px" height="120px"> |
-| **Dashboard (Visão Geral)** | **Página Admin / Configurações** |
-| <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Tela de Dashboard" width="120px" height="120px"> | <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Tela Administrativa" width="120px" height="120px"> |
+| Miguel Gomes | [link ](https://miguels-portifolio.vercel.app/)|
+| João Moura | [link](https://my-portfolio-ebon-ten-47.vercel.app/#contact) |
+| Henrique | link |
 
 ## 👥 Autores
 Liste os principais contribuidores. Você pode usar links para seus perfis.
@@ -74,8 +73,5 @@ Liste os principais contribuidores. Você pode usar links para seus perfis.
 | Henrique  | <div align="center"><img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" width="70px" height="70px"></div> | <div align="center"><a href="https://github.com/user1"><img src="https://joaopauloaramuni.github.io/image/github6.png" width="50px" height="50px"></a></div> | <div align="center"><a href="https://www.linkedin.com/in/user1"><img src="https://joaopauloaramuni.github.io/image/linkedin2.png" width="50px" height="50px"></a></div> | <div align="center"><a href="mailto:user1@gmail.com"><img src="https://joaopauloaramuni.github.io/image/gmail3.png" width="50px" height="50px"></a></div> |
 | Joao Moura  | <div align="center"><img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" width="70px" height="70px"></div> | <div align="center"><a href="https://github.com/user2"><img src="https://joaopauloaramuni.github.io/image/github6.png" width="50px" height="50px"></a></div> | <div align="center"><a href="https://www.linkedin.com/in/user2"><img src="https://joaopauloaramuni.github.io/image/linkedin2.png" width="50px" height="50px"></a></div> | <div align="center"><a href="mailto:user2@gmail.com"><img src="https://joaopauloaramuni.github.io/image/gmail3.png" width="50px" height="50px"></a></div> |
 | Miguel Gomes | <div align="center"><img src="https://github.com/user-attachments/assets/05082ca5-04b4-4574-a5bd-76f9da37cf3a" width="70px" height="70px"></div> | <div align="center"><a href="https://github.com/Miguelgdn1"><img src="https://joaopauloaramuni.github.io/image/github6.png" width="50px" height="50px"></a></div> | <div align="center"><a href="https://www.linkedin.com/in/miguelgdn"><img src="https://joaopauloaramuni.github.io/image/linkedin2.png" width="50px" height="50px"></a></div> | <div align="center"><a href="mailto:gmiguel858@gmail.com"><img src="https://joaopauloaramuni.github.io/image/gmail3.png" width="50px" height="50px"></a></div> |
-
-> [!TIP]
-> 💡 **Dica:** Escolha uma foto profissional, preferencialmente de rosto, evitando imagens com baixa qualidade, filtros excessivos ou elementos distrativos.
 
 ---
