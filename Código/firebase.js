@@ -3,12 +3,12 @@ import { getFirestore } from "https://www.gstatic.com/firebasejs/10.8.0/firebase
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyAoi-w1JuBIi0X3W_cBg6gJHOeu3ejGwIo",
-  authDomain: "my-portifolio-e7560.firebaseapp.com",
-  projectId: "my-portifolio-e7560",
-  storageBucket: "my-portifolio-e7560.firebasestorage.app",
-  messagingSenderId: "573028500104",
-  appId: "1:573028500104:web:dc9aebf30b8e8f337d553d"
+  apiKey: "AIzaSyBXp65SSdFhSE6O6ai4tdPiaGDtDfb6wGA",
+  authDomain: "my-portifolio-6a389.firebaseapp.com",
+  projectId: "my-portifolio-6a389",
+  storageBucket: "my-portifolio-6a389.firebasestorage.app",
+  messagingSenderId: "93925680477",
+  appId: "1:93925680477:web:e279cb8959353d906af4b4"
 };
 
 // Initialize Firebase
