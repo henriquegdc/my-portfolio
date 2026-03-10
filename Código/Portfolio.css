@@ -1,5 +1,5 @@
 :root {
-    --primary: #cc7832; /* Laranja ferrugem característico das keywords */
+    --primary: #32cc7a; /* Laranja ferrugem característico das keywords */
     --secondary: #6897bb; /* Azul de números/variáveis */
     --accent: #9876aa; /* Roxo para classes/interfaces */
     --success: #629755; /* Verde para comentários/strings */
@@ -13,7 +13,7 @@
     --text-primary: #a9b7c6; /* Texto base Darcula */
     --text-secondary: #808080;
     --text-muted: #02070c;
-    --gradient-1: linear-gradient(135deg, #cc7832 0%, #6897bb 100%);
+    --gradient-1: linear-gradient(135deg, #579545 0%, #6897bb 100%);
     --gradient-2: linear-gradient(135deg, #6897bb 0%, #cc7832 100%);
     
     --shadow-sm: 0 2px 4px rgba(0,0,0,0.15);
