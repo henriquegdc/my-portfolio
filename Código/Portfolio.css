@@ -3555,6 +3555,8 @@ body {
 .feedback-item .feedback-text {
     margin-top: 0.5rem;
     white-space: pre-wrap;
+}
+
 .project-card {
     cursor: pointer;
     position: relative;

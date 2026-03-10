@@ -1061,76 +1061,54 @@ document.addEventListener('DOMContentLoaded', () => {
     initFeedback();
     initHacksSlider();
     initProjectModal();
+    initContactForm();
 });
 
-function initEmailJS() {
-  emailjs.init(EMAILJS_CONFIG.publicKey);
-}
-
-
-async function enviarEmail({ nome, email, mensagem }) {
-  const templateParams = {
-    from_name: nome,
-    from_email: email,
-    message: mensagem,
-  };
-
-  try {
-    const response = await emailjs.send(
-      EMAILJS_CONFIG.serviceID,
-      EMAILJS_CONFIG.templateID,
-      templateParams
-    );
-    console.log("Email enviado com sucesso!", response.status, response.text);
-    return { sucesso: true, mensagem: "Email enviado com sucesso!" };
-  } catch (erro) {
-    console.error("Erro ao enviar email:", erro);
-    return { sucesso: false, mensagem: "Erro ao enviar. Tente novamente." };
-  }
-}
-
 const EMAILJS_CONFIG = {
-  serviceID: "service_y9s2jn5",
-  templateID: "template_2dyxo09",
-  publicKey: "KH4L1BXtO99hWbZjI",
+  serviceID: "service_zxjg2ug",
+  templateID: "template_l894rn6",
+  publicKey: "Jc9SMeRVwtANXYtu4",
 };
 
-
-emailjs.init(EMAILJS_CONFIG.publicKey);
-
-
-const contactForm = document.getElementById("contactForm");
-if (contactForm) {
-  contactForm.addEventListener("submit", async (e) => {
-    e.preventDefault();
-    
-    const btn = contactForm.querySelector("button[type=submit]");
-    const span = btn.querySelector("span"); 
-    
-    btn.disabled = true;
-    span.textContent = "Enviando...";
-
-    try {
-      await emailjs.send(
-        EMAILJS_CONFIG.serviceID, 
-        EMAILJS_CONFIG.templateID, 
-        {
-          from_name: document.getElementById("nome").value,
-          from_email: document.getElementById("email").value,
-          subject: document.getElementById("assunto").value,
-          message: document.getElementById("mensagem").value,
-        }
-      );
-      
-      alert("Mensagem enviada com sucesso!");
-      contactForm.reset();
-    } catch (err) {
-      console.error("Erro detalhado do EmailJS:", err); 
-      alert("Erro ao enviar. Tente novamente.");
+function initContactForm() {
+    if (typeof emailjs !== 'undefined') {
+        emailjs.init(EMAILJS_CONFIG.publicKey);
     }
 
-    btn.disabled = false;
-    span.textContent = "Send Secure Message";
-  });
+    const contactForm = document.getElementById("contactForm");
+    if (contactForm) {
+        contactForm.addEventListener("submit", async (e) => {
+            e.preventDefault();
+            
+            const btn = contactForm.querySelector("button[type=submit]");
+            const span = btn.querySelector("span"); 
+            
+            btn.disabled = true;
+            span.textContent = "Enviando...";
+
+            try {
+                await emailjs.send(
+                    EMAILJS_CONFIG.serviceID, 
+                    EMAILJS_CONFIG.templateID, 
+                    {
+                        from_name: document.getElementById("nome").value,
+                        from_email: document.getElementById("email").value,
+                        subject: document.getElementById("assunto").value,
+                        message: document.getElementById("mensagem").value,
+                    }
+                );
+                
+                alert("Mensagem enviada com sucesso!");
+                contactForm.reset();
+            } catch (err) {
+                console.error("Erro detalhado do EmailJS:", err); 
+                alert("Erro ao enviar. Tente novamente.");
+            }
+
+            btn.disabled = false;
+            span.textContent = "Send Secure Message";
+        });
+    }
 }
+
 
