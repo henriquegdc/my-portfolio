@@ -63,7 +63,7 @@ Para melhor visualização, as telas principais estão organizadas lado a lado.
 | :---: | :---: |
 | Miguel Gomes | [link ](https://miguels-portifolio.vercel.app/)|
 | João Moura | [link](https://my-portfolio-ebon-ten-47.vercel.app/#contact) |
-| Henrique | link |
+| Henrique | [link](https://my-portfolio-two-fawn-99.vercel.app/) |
 
 ## 👥 Autores
 Liste os principais contribuidores. Você pode usar links para seus perfis.
