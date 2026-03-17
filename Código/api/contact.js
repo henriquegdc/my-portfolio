@@ -6,6 +6,14 @@ export default async function handler(req, res) {
 
     const { nome, email, assunto, mensagem } = req.body;
 
+    if (!nome || !email || !assunto || !mensagem) {
+        return res.status(400).json({ error: 'Todos os campos são obrigatórios.' });
+    }
+
+    if (mensagem.length > 2000) {
+        return res.status(400).json({ error: 'A mensagem excede o limite de 2000 caracteres.' });
+    }
+
     const data = {
         service_id: process.env.EMAILJS_SERVICE_ID,
         template_id: process.env.EMAILJS_TEMPLATE_ID,
