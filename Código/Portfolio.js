@@ -612,7 +612,7 @@ function initLanguage() {
         { pt: "BEM VINDO", en: "WELCOME" },
         { pt: "AO MEU", en: "TO MY" },
         { pt: "PORTIFÓLIO", en: "PORTFOLIO" },
-        { pt: "Desenvolvimento Full-Stack", en: "Full-Stack Development" },
+        { pt: "Full-Stack", en: "Full-Stack Development" },
         { pt: "Design de API", en: "API Design" },
         { pt: "Arquitetura de Software", en: "Software Architecture" },
         { pt: "Engenheiro de Software focado na construção de arquiteturas robustas e aplicações web de alto desempenho, desde a infraestrutura de backend até interfaces dinâmicas e responsivas.", en: "Software Engineer focused on building robust architectures and high-performance web applications, from backend infrastructure to dynamic and responsive interfaces." },
