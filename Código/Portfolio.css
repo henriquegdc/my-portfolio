@@ -1110,7 +1110,7 @@ body {
 .security-monitor {
     position: relative;
     width: 100%;
-    max-width: 400px;
+    max-width: 800px;
     transform: scale(0.9);
     transition: transform var(--transition);
 }
@@ -1185,7 +1185,7 @@ body {
     flex-direction: column;
     gap: 15px;
     padding: 10px;
-    height: 300px; /* Altura fixa para permitir scroll */
+    height: 550px; /* Altura fixa para permitir scroll */
     overflow-y: auto;
     overflow-x: hidden;
     scrollbar-width: thin;
